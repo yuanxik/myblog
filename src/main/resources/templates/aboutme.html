@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments::head(~{::title})">
+    <meta charset="UTF-8">
+    <title>关于我</title>
+    <!--移动端预览设置-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+
+<!--导航-->
+<nav th:replace="_fragments::menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu"><!--stackable移动端导航:可堆叠-->
+            <h2 ui class="ui teal secondary item">Blog</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" home icon"></i> 首页</a><!--m-mobile-hide:手机端隐藏-->
+            <a href="#" class=" m-item item m-mobile-hide"><i class=" idea icon"></i> 分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" tags icon"></i> 标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" clone icon"></i> 归档</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class=" info icon"></i> 关于我</a>
+            <div class="right item">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Search..">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<!--中间内容-->
+<div class="m-container-small m-padding-tb-large">
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <div class="eleven wide column">
+                <img src="../static/images/makabaka.jpg" th:src="@{/images/makabaka.jpg}" alt="" class="ui rounded image">
+            </div>
+            <div class="five wide column">
+                <div class="ui top attached segment">
+                    <div class="ui header">
+                        关于我
+                    </div>
+                </div>
+                <div class="ui attached segment">
+                    <p class="m-text">
+                        玛卡巴卡是一个扁饼蛋糕造型的宝宝，住在花园边上小渠尽头的洞穴里。他最喜欢的事是收集并清洗石头。
+                    </p>
+                    <p class="m-text">
+                        他也喜欢为花园里其他的玩偶们洗脸并且帮他们吹干。他为此准备了一块可爱的大海绵和一块紫色的肥皂，还有一个风箱似的吹风机。他把所有这些设备都放在推推车上，推着满花园走。因为他是花园里个头最小的角色之一，所以他还有个小喇叭，告诉大家他来了。
+                    </p>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui orange basic label">咿呀呦</div>
+                    <div class="ui orange basic label">报警！</div>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">洗脸</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">洗石子</div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+                    <a href="#" class="ui wechat circular icon button"><i class="wechat icon"></i></a>
+                    <a href="#" class="ui qq circular icon button " data-content="934099677" data-position="bottom center"><i class="qq icon"></i></a>
+                </div>
+                <div class="ui wechat-qr flowing popup  transition hidden">
+                    <img src="../static/images/二维码.jpg" alt="" class="ui rounded image" style="width: 100px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<!--底部-->
+<footer th:replace="_fragments::footer" class="ui inverted vertical segment m-padding-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid  stackable">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="../static/images/图标2.ico" class="ui rounded image" alt="" style="width: 100px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui  inverted  header">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事1</a>
+                    <a href="#" class="item">用户故事2</a>
+                    <a href="#" class="item">用户故事3</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui  inverted  header">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事1</a>
+                    <a href="#" class="item">用户故事2</a>
+                    <a href="#" class="item">用户故事3</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui  inverted  header">编者寄</h4>
+                <p>但愿人长久，千里共婵娟</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-mini"> 博客欢迎你</p>
+    </div>
+</footer>
+
+<!--/*/<th:block th:replace="_fragments::script">/*/-->
+<!--yin引入jquery-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--引入semantic ui-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+
+<script src="../static/lib/tocbot/tocbot.min.js"></script>
+<script src="../static/lib/qrcode/qrcode.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script>
+    $(`.menu.toggle`).click(function () {
+        $(`.m-item`).toggleClass(`m-mobile-hide`);
+    });
+
+    $(`.wechat`).popup({
+        popup: $(`.wechat-qr`),
+        position: `right center`,
+    });
+
+    $(`.qq`).popup();
+
+
+
+</script>
+</body>
+</html>
